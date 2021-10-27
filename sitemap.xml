@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://minutiae.github.io/docs/</loc>
+    <lastmod>2018-11-28T15:14:39+10:00</lastmod>
+  </url><url>
+    <loc>https://minutiae.github.io/docs/install-system/</loc>
+    <lastmod>2021-10-02T19:27:37+10:00</lastmod>
+  </url><url>
+    <loc>https://minutiae.github.io/docs/update-system/</loc>
+    <lastmod>2019-02-11T19:30:08+10:00</lastmod>
+  </url><url>
+    <loc>https://minutiae.github.io/docs/file-download/</loc>
+    <lastmod>2019-02-11T19:27:37+10:00</lastmod>
+  </url><url>
+    <loc>https://minutiae.github.io/</loc>
+    <lastmod>2018-11-28T15:14:39+10:00</lastmod>
+  </url><url>
+    <loc>https://minutiae.github.io/categories/</loc>
+  </url><url>
+    <loc>https://minutiae.github.io/tags/</loc>
+  </url>
+</urlset>
