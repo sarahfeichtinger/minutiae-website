@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Minutiae</title>
+    <link>https://sarahfeichtinger.github.io/minutiae-website/</link>
+    <description>Recent content on Minutiae</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Nov 2018 15:14:39 +1000</lastBuildDate><atom:link href="https://sarahfeichtinger.github.io/minutiae-website/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install system</title>
+      <link>https://sarahfeichtinger.github.io/minutiae-website/docs/install-system/</link>
+      <pubDate>Sat, 02 Oct 2021 19:27:37 +1000</pubDate>
+      
+      <guid>https://sarahfeichtinger.github.io/minutiae-website/docs/install-system/</guid>
+      <description>Instruction for installing the first door.</description>
+    </item>
+    
+    <item>
+      <title>Update system</title>
+      <link>https://sarahfeichtinger.github.io/minutiae-website/docs/update-system/</link>
+      <pubDate>Mon, 11 Feb 2019 19:30:08 +1000</pubDate>
+      
+      <guid>https://sarahfeichtinger.github.io/minutiae-website/docs/update-system/</guid>
+      <description>Instruction for adding more doors.</description>
+    </item>
+    
+    <item>
+      <title>Download files</title>
+      <link>https://sarahfeichtinger.github.io/minutiae-website/docs/file-download/</link>
+      <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
+      
+      <guid>https://sarahfeichtinger.github.io/minutiae-website/docs/file-download/</guid>
+      <description>Download the files for the first door.</description>
+    </item>
+    
+  </channel>
+</rss>

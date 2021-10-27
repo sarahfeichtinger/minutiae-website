@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Update system - Minutiae</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="https://sarahfeichtinger.github.io/minutiae-website/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/minutiae-website/css/style.min.e3a14b20a8571963376d68d7dd9f39d3ba6dce11fbfe0d97eab10ab23cd6c498.css">
+  
+
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/minutiae-website/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-docs">
+      <a href="/minutiae-website/docs/">
+        <span>Docs</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="https://sarahfeichtinger.github.io/minutiae-website/"><img alt="Logo" src="/minutiae-website/images/logo.svg" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="https://sarahfeichtinger.github.io/minutiae-website/"><img alt="Logo" src="/minutiae-website/images/logo.svg" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/minutiae-website/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-docs">
+      <a href="/minutiae-website/docs/">
+        <span>Docs</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Docs</h4>
+  <ul>
+    
+    <li class="">
+      <a href="https://sarahfeichtinger.github.io/minutiae-website/docs/install-system/">Install system</a>
+    </li>
+    
+    <li class="active ">
+      <a href="https://sarahfeichtinger.github.io/minutiae-website/docs/update-system/">Update system</a>
+    </li>
+    
+    <li class="">
+      <a href="https://sarahfeichtinger.github.io/minutiae-website/docs/file-download/">Download files</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">Update system</h1>
+<div class="content ">
+  <h2 id="update-the-old-doors">Update the old doors</h2>
+<p>For this step, we really recommend enabling using ssh, especially if you already have many raspberries installed,
+otherwise you have to go to each of yours doors and update it.</p>
+<p>VERY IMPORTANT: To enable the synchronisation with the other raspberries, in other words, to add the raspberry to the cluster,
+we have to add the new raspberries IP address to each the configuration files of the already running raspberries. It is very important, that
+the first raspberry you update ist the cluster head, means the very first door you did set up. The order of the other ones doesn&rsquo;t matter.</p>
+<p>Do the following process for each raspberry now, starting with your head raspberry:</p>
+<ul>
+<li>
+<p>Leave the Kioskmode and swap to a terminal by pressing F3 or Strg + Alt + F3</p>
+</li>
+<li>
+<p>Mount the usb stick carrying the files like in the installation script described</p>
+</li>
+<li>
+<p>To prevent you from updating the config files yourself, you get the already updated files for the old raspberries along with the new installation files.
+Each folder you got is named &ldquo;IPAddress_Doorname&rdquo; and contains a <code>galera.cnf</code> file. You have to replace this files on the old raspberries with the new ones now.</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sudo cp -r /media/usb/shdb/setup/&lt;ipAddress_Doorname&gt;/galera.cnf .
+</code></pre></div><ul>
+<li>type <code>sudo reboot</code> to make your changes effective, you&rsquo;ll automatically be in the Kioskmode again after the reboot (in general you can go back with STRG+ALT+F1)</li>
+</ul>
+<h2 id="new-door">New Door</h2>
+<p>The steps are exactly the same as for the <a href="../install-system/">first raspberry</a> with one exception:</p>
+<p>This time, you can&rsquo;t get the <strong>configuration files</strong> for the new raspberry from this website anymore.</p>
+<ul>
+<li>Add the door in the frontend on one of the already running raspberries</li>
+<li>You&rsquo;ll get a download option witch returns a zip folder after adding the door.</li>
+<li>Extract the folder and put the files on a stick in a folder called <code>newnode</code>
+<ul>
+<li>Notice, that in this folder there also files for updating the old doors are included, you can recognize the folder for the new door by the folder naming which is &ldquo;ipAddress_doorname&rdquo;</li>
+</ul>
+</li>
+</ul>
+<p>When you run the installation scripts, be careful to use the same username and password for the setup.sh script as you did the first time, there is no verification but it wont work if you do it wrong</p>
+
+</div>
+
+<div>
+  
+</div>
+
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          <ul>
+            <li class="zerostatic"><a href="https://github.com/pcode-at/minutiae.git">https://github.com/</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/minutiae-website/js/scripts.min.eaf147370baecdd07c022597db631f99cab1c9cd6479de586f30327a568d6a0f.js"></script>
+  
+
+  homepage_image
+  
+  
+    
+  
+
+
+</body>
+
+</html>
