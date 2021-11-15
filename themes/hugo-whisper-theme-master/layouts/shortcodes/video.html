@@ -1,0 +1,3 @@
+<video style="width: 80%" class="video-shortcode" preload="{{ .Get "preload" }}" autoplay loop>
+<source src="{{ .Get "src" | urlize | relURL }}" type="{{ .Get "type" }}">
+</video>

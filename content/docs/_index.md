@@ -29,6 +29,8 @@ The advantage of this decentralized system is, that even if one door is seperate
 
 ### Frontend
 
+{{< video src="/frontend.mp4" type="video/mp4" preload="metadata" >}}
+
 The frontend is written in React and summarized provides following functionality:
 
 - Add new Users and Admins and store some further information like address, full name, phone number,.. if wanted.
@@ -36,8 +38,6 @@ The frontend is written in React and summarized provides following functionality
 - Grant users access for certain doors.
 - Add new doors and download the config files for their controllers.
 - View logs of the system usage
-
-![Frontend Screencast](/terminal.gif)
 
 ### Backend
 
