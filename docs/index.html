@@ -94,6 +94,9 @@ There is a web interface for administrators through which they can make various 
 The advantage of this decentralized system is, that even if one door is seperated from the other doors for some reason, it will still work on its own
 (even though changes are not effective for it anymore, of course), and also there is no central server if dying would make the whole system inoperable.</p>
 <h3 id=frontend>Frontend</h3>
+<video style=width:80% class=video-shortcode preload=metadata autoplay loop>
+<source src=/minutiae-website-test/frontend.mp4 type=video/mp4>
+</video>
 <p>The frontend is written in React and summarized provides following functionality:</p>
 <ul>
 <li>Add new Users and Admins and store some further information like address, full name, phone number,.. if wanted.</li>
@@ -102,7 +105,6 @@ The advantage of this decentralized system is, that even if one door is seperate
 <li>Add new doors and download the config files for their controllers.</li>
 <li>View logs of the system usage</li>
 </ul>
-<p><img src=/terminal.gif alt="Frontend Screencast"></p>
 <h3 id=backend>Backend</h3>
 <p>The NestJs backend provides the data for the frontend using the REST Api on the one hand
 and also takes over the communication with the fingerprint sensor control software, using MQTT.
