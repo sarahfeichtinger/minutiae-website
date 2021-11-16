@@ -1,0 +1,115 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<title>Download files - Minutiae</title>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=icon href=https://sarahfeichtinger.github.io/minutiae-website/favicon.png>
+<link rel=stylesheet href=/minutiae-website/css/style.min.e3a14b20a8571963376d68d7dd9f39d3ba6dce11fbfe0d97eab10ab23cd6c498.css>
+</head>
+<body class="page page-default-single">
+<div id=main-menu-mobile class=main-menu-mobile>
+<ul>
+<li class=menu-item-home>
+<a href=/minutiae-website/>
+<span>Home</span>
+</a>
+</li>
+<li class=menu-item-docs>
+<a href=/minutiae-website/docs/>
+<span>Docs</span>
+</a>
+</li>
+</ul>
+</div>
+<div class=wrapper>
+<div class=header>
+<div class=container>
+<div class=logo>
+<a href=https://sarahfeichtinger.github.io/minutiae-website/><img alt=Logo src=/minutiae-website/images/logo.svg></a>
+</div>
+<div class=logo-mobile>
+<a href=https://sarahfeichtinger.github.io/minutiae-website/><img alt=Logo src=/minutiae-website/images/logo.svg></a>
+</div>
+<div id=main-menu class=main-menu>
+<ul>
+<li class=menu-item-home>
+<a href=/minutiae-website/>
+<span>Home</span>
+</a>
+</li>
+<li class=menu-item-docs>
+<a href=/minutiae-website/docs/>
+<span>Docs</span>
+</a>
+</li>
+</ul>
+</div>
+<button id=toggle-main-menu-mobile class="hamburger hamburger--slider" type=button>
+<span class=hamburger-box>
+<span class=hamburger-inner></span>
+</span>
+</button>
+</div>
+</div>
+<div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+<div class=row>
+<div class="col-12 col-md-3 mb-3">
+<div class=sidebar>
+<div class=docs-menu>
+<h4>Docs</h4>
+<ul>
+<li>
+<a href=https://sarahfeichtinger.github.io/minutiae-website/docs/install-system/>Install system</a>
+</li>
+<li>
+<a href=https://sarahfeichtinger.github.io/minutiae-website/docs/update-system/>Update system</a>
+</li>
+<li class=active>
+<a href=https://sarahfeichtinger.github.io/minutiae-website/docs/file-download/>Download files</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-12 col-md-9">
+<h1 class=title>Download files</h1>
+<div class=content>
+<p>Add your ip and a password, and you&rsquo;ll get a folder with all needed installation files
+for your first raspberry. Put it on an usb stick and move it on to the raspberry.
+Type <code>hostname -I</code> to get your Raspberries IP.<br>
+Read more about the installing process in the <a href>documentation</a></p>
+<h2 id=download>Download</h2>
+</div>
+<div>
+<script defer language=javascript type=text/javascript src=/minutiae-website/js/jszip.js></script>
+<script defer language=javascript type=text/javascript src=/minutiae-website/js/filesaver.js></script>
+<form>
+<label for=doorname>Doorname:</label><br>
+<input type=text id=doorname name=dname required><br><br>
+<label for=ipaddress>IP Address:</label><br>
+<input type=text id=ipaddress name=ipaddress required><br><br>
+<a href=/minutiae-website/download-config-files/config-files.zip download=config-files.zip onclick=generateAndDownloadFiles()>Get files</a>
+</form>
+<script defer>function generateAndDownloadFiles(){var b=document.getElementById("doorname").value||null,a=document.getElementById("ipaddress").value||null,c;if(b!=null&&a!=null){c=new JSZip;const d="minutiae";c.file('galera.cnf',generateConfigFile(d,a,a,b)),c.generateAsync({type:"blob"}).then(function(a){saveAs(a,"galera-config.zip")})}}function generateConfigFile(a,b,c,d){return'[mysqld]\nbinlog_format=ROW\ndefault-storage-engine=innodb\ninnodb_autoinc_lock_mode=2\nbind-address=0.0.0.0\n\n# Galera Provider Configuration\nwsrep_on=ON\nwsrep_provider=/usr/lib/galera/libgalera_smm.so\n\n# Galera Cluster Configuration\nwsrep_cluster_name="'+a+'"\n'+'wsrep_cluster_address="gcomm://'+b+'"\n'+'\n'+'# Galera Synchronization Configuration\n'+'wsrep_sst_method=rsync\n'+'\n'+'# Galera Node Configuration\n'+'wsrep_node_address="'+c+'"\n'+'wsrep_node_name="'+d+'"\n'}</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=sub-footer>
+<div class=container>
+<div class=row>
+<div class=col-12>
+<div class=sub-footer-inner>
+<ul>
+<li class=zerostatic><a href=https://github.com/pcode-at/minutiae.git>https://github.com/</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type=text/javascript src=/minutiae-website/js/scripts.min.eaf147370baecdd07c022597db631f99cab1c9cd6479de586f30327a568d6a0f.js></script>
+</body>
+</html>
