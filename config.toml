@@ -1,4 +1,4 @@
-baseURL = "https://sarahfeichtinger.github.io/minutiae-website-test/"
+baseURL = "https://sarahfeichtinger.github.io/minutiae-website/"
 languageCode = "en-us"
 title = "Minutiae"
 themesDir = "./themes"
