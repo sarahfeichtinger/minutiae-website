@@ -39,4 +39,3 @@ summaryLength = 30
   [params.logo]
       mobile = "/images/logo.svg"
       standard  = "/images/logo.svg"
-
